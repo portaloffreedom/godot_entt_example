@@ -1,0 +1,9 @@
+[gd_resource type="GDNativeLibrary" format=2]
+
+[resource]
+config_file = Object(ConfigFile,"script":null)
+
+entry/X11.64 = "res://bin/libentt_example.so"
+entry/X11.32 = "res://bin/libentt_example.so"
+dependency/X11.64 = [  ]
+dependency/X11.32 = [  ]

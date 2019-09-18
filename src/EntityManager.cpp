@@ -32,6 +32,7 @@ EntityManager::~EntityManager()
 void EntityManager::_init()
 {
     this->entity_scene = ResourceLoader::get_singleton()->load("res://models/Entity.tscn");
+    this->entity_script = ResourceLoader::get_singleton()->load("res://src/Entity.gdns");
     this->create_entity();
 }
 
@@ -75,6 +76,7 @@ void EntityManager::create_entity()
     registry.assign<velocity>(entity, dx, 0.0f, dz);
     Spatial* entity_node = reinterpret_cast<Spatial*>(entity_scene->instance());
     this->add_child(entity_node);
+    entity_node->set_script(this->entity_script.ptr());
     registry.assign<Spatial*>(entity, entity_node);
     Godot::print("Node Added");
 }

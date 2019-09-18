@@ -19,5 +19,5 @@ extern "C" void GDN_EXPORT godot_nativescript_init(void *handle)
 	std::cout << "godot_nativescript_init()" << std::endl;
 	godot::Godot::nativescript_init(handle);
 	godot::register_class<godot::Entity>();
-	// godot::register_class<EntityManager>();
+	godot::register_class<godot::EntityManager>();
 }

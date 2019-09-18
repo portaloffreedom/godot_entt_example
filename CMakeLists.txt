@@ -4,6 +4,7 @@ project(entt_example)
 set(CMAKE_CXX_STANDARD 17)
 
 add_subdirectory(thirdparty/godot-cpp/)
+add_subdirectory(thirdparty/entt/)
 
 if(MSVC)
     # Force to always compile with W4
@@ -26,7 +27,11 @@ set(BUILD_PATH ${CMAKE_SOURCE_DIR}/bin)
 
 add_library(entt_example SHARED ${SPACESHIP_SRC})
 
-target_link_libraries(entt_example ${GODOT_CPP_LIB} godot-cpp)
+target_link_libraries(entt_example
+    ${GODOT_CPP_LIB}
+    godot-cpp
+    EnTT
+)
 
 # create the library directly in the right folder
 set_target_properties(entt_example PROPERTIES

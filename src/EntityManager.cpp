@@ -57,7 +57,7 @@ void EntityManager::_process(float delta)
     }
 
     Input *input = Input::get_singleton();
-    if (input->is_action_just_pressed("ui_accept"))
+    if (input->is_action_pressed("ui_accept"))
     {
         this->create_entity();
     }

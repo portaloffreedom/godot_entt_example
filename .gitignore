@@ -2,3 +2,5 @@
 /cmake-build-*/
 *.so
 *.a
+*.dylib
+*.dll
